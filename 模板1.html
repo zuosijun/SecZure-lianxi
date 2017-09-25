@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.navbar-brand>img {
+				max-height: 46px;
+				margin-top: -14px;
+			}
+			
+			.navbar-default {
+				background-color: transparent;
+				border-color: transparent;
+			}
+			
+			.navbar-default .navbar-nav>li>a {
+				color: #fff;
+			}
+			
+			.navbar-default .navbar-nav>li:hover>a {
+				border-bottom: 5px solid skyblue;
+				color: #fff;
+			}
+			
+			.navbar-default .navbar-nav>li>a:visited {
+				color: #fff;
+			}
+			
+			.navbar-nav>li>a {
+				height: 50px;
+			}
+			
+			.dropdown-menu {
+				background-color: rgba(0, 0, 0, 1);
+			}
+			
+			.dropdown-menu>li a {
+				color: #fff;
+			}
+			
+			.dropdown-menu>li:hover a {
+				background-color: skyblue;
+				color: #fff;
+			}
+			
+			#abc:visited {
+				background-color: transparent;
+			}
+			
+			.navbar-fixed-top .navbar-collapse {
+				max-height: 600px;
+			}
+			
+			.navbar-default .navbar-nav>.open>a,
+			.navbar-default .navbar-nav>.open>a:focus,
+			.navbar-default .navbar-nav>.open>a:hover {
+				color: #fff;
+				background-color: transparent;
+				border-bottom: 5px solid skyblue;
+			}
+			
+			.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+				color: #fff;
+			}
+			
+			.navbar-default .navbar-nav .open .dropdown-menu>li>a:focus,
+			.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
+				color: skyblue;
+				background-color: transparent;
+			}
+			
+			.navbar-default .navbar-nav>.open>a:visited {
+				color: #fff;
+				background-color: transparent;
+			}
+			
+			.head2 {
+				position: absolute;
+				right: 0;
+				left: 0;
+				z-index: 20;
+			}
+			
+			@media (min-width: 768px) {
+				.navbar-nav {
+					margin-left: 50px !important;
+				}
+			}
+			
+			.rightlang {
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				color: #fff;
+			}
+			
+			.nav2li>a {
+				height: 50px;
+				line-height: 50px !important;
+				color: #fff;
+				font-size: 14px;
+				padding-top: 0px !important;
+				padding-bottom: 0px !important;
+				display: inline-block;
+				text-decoration: none;
+			}
+			
+			.container-fluid>.navbar-collapse,
+			.container-fluid>.navbar-header,
+			.container>.navbar-collapse,
+			.container>.navbar-header {
+				margin-right: -30px;
+				margin-left: -30px;
+			}
+			
+			.in {
+				background-color: rgba(0, 0, 0, .7);
+			}
+			
+			#zw1 {
+				background-color: #f2f4f5;
+			}
+			
+			.title {
+				margin: 90px 0;
+			}
+			
+			.h2s {
+				color: #6fbef7;
+				margin: 0 0 20px;
+				font-size: 50px;
+				line-height: 50px;
+			}
+			
+			.h3s {
+				font-size: 38px;
+				line-height: 38px;
+				color: #505e73;
+			}
+			
+			.box {
+				overflow: hidden;
+				margin: 90px 0;
+				text-align: right;
+			}
+			
+			.ps1 {
+				margin: 25px 0 30px;
+				color: #808080;
+			}
+			
+			.fr {
+				float: right;
+			}
+			
+			.tar {
+				text-align: right;
+			}
+			
+			.fl {
+				float: left;
+			}
+			
+			.color2 {
+				color: #8ddcde;
+			}
+			
+			.new001 {
+				padding: 60px 0 40px 0;
+				background: #f2f4f5;
+				overflow: hidden;
+			}
+			
+			.h3c {
+				color: #505e73;
+			}
+			
+			.h3fs {
+				font-size: 30px;
+				line-height: 1.7;
+			}
+			
+			.h3mb {
+				margin-bottom: 10px;
+			}
+			
+			.btns {
+				margin-bottom: 75px;
+				background: #fa7676;
+				color: #fff;
+			}
+			
+			.btn.focus,
+			.btn:focus,
+			.btn:hover {
+				color: #fff;
+				text-decoration: none;
+			}
+			
+			.new001 {
+				padding: 60px 0 40px 0;
+				background: #f2f4f5;
+				overflow: hidden;
+			}
+			
+			.container1 {
+				padding-right: 0px;
+				padding-left: 0px;
+			}
+			
+			.item1 {
+				min-height: 120px;
+				padding: 20px;
+				background: #fff;
+				border-radius: 2px;
+				text-align: left;
+				margin-bottom: 30px;
+			}
+			
+			.item1 img {
+				float: left;
+				width: 80px;
+				margin-right: 10px;
+				border-radius: 2px;
+			}
+			
+			.item1 .mb5 {
+				margin-bottom: 5px;
+			}
+			
+			.item1>.ps {
+				font-size: 12px;
+				color: #999;
+				line-height: 20px;
+				word-wrap: break-word;
+				word-break: break-all;
+			}
+			.mgb{
+				margin-bottom: 30px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<nav class="navbar navbar-default head2">
+			<div class="head2 container clearfix navbar-static-top">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				    </button>
+					<a class="navbar-brand" href="#"><img alt="Brand" src="img/1501319112.png"></a>
+				</div>
+				<div class="navbar-header col-sm-9">
+					<!--hidden-xs-->
+					<div class="collapse navbar-collapse container" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav ">
+							<li>
+								<a href="#">首页</a>
+							</li>
+							<li id="abc" class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">技术产品</a>
+								<ul class="dropdown-menu " id="def">
+									<li>
+										<a href="https://www.baidu.com/">安全优盘</a>
+									</li>
+									<li>
+										<a href="https://www.baidu.com/">安全硬盘</a>
+									</li>
+									<li>
+										<a href="https://www.baidu.com/">安全U盾</a>
+									</li>
+
+								</ul>
+							</li>
+							<li id="abc" class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">解决方案</a>
+								<ul class="dropdown-menu " id="def">
+									<li>
+										<a href="https://www.baidu.com/">教育行业</a>
+									</li>
+									<li>
+										<a href="#">软件行业</a>
+									</li>
+									<li>
+										<a href="#">游戏行业</a>
+									</li>
+									<li>
+										<a href="#">工控行业</a>
+									</li>
+								</ul>
+							</li>
+							<li id="abc" class="dropdown">
+								<a href="#" id="dropdownMenu1" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">服务支持</a>
+								<ul class="dropdown-menu " id="def">
+									<li>
+										<a href="#">在线下载</a>
+									</li>
+									<li>
+										<a href="#">售后服务</a>
+									</li>
+									<li>
+										<a href="#">在线留言</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">客户案例</a>
+							</li>
+							<li id="abc" class="dropdown">
+								<a href="#" id="dropdownMenu1" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">关于数组</a>
+								<ul class="dropdown-menu " id="def">
+									<li>
+										<a href="#">公司介绍</a>
+									</li>
+									<li>
+										<a href="#">联系我们</a>
+									</li>
+									<li>
+										<a href="#">申请合作</a>
+									</li>
+									<li>
+										<a href="#">数组新闻</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">在线购买</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-sm-1 col-xs-6 rightlang hidden-xs">
+					<div class="nav2li text-right">
+						<a href="#" class="StranBody menu_hover langhover">繁体中文</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+			<!-- 下面的点点点 -->
+			<ol class="carousel-indicators">
+				<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+			</ol>
+			<!-- 轮播主体区域-->
+			<div class="carousel-inner" role="listbox">
+				<div class="item active">
+					<img src="img/1502259568.jpg" alt="...">
+
+				</div>
+				<div class="item">
+					<img src="img/1502259549.jpg" alt="...">
+				</div>
+			</div>
+		</div>
+
+		<div class="class=" container-fluid "">
+			<div id="zw1" class="container-fluid">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-5 title ">
+							<h2 class="h2s">数字版权保护</h2>
+							<h3 class="h3s">安全优盘</h3>
+							<p class="ps1">二次开发 | API接口 | 提供SDK | 防拷贝| 硬件加密</p>
+							<a class="btn btn-primary " href="#">详细信息</a>
+						</div>
+						<div class="col-sm-7 box ">
+							<a href="#">
+								<img src="img/1502158102.png" class="img-responsive">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-5 title fr tar">
+							<h2 class="h2s color2">稳定 ● 可靠</h2>
+							<h3 class="h3s">安全硬盘</h3>
+							<p class="ps1">全盘加密 | 防对拷 | 防复制 | 防Ghost | 硬件加密芯片</p>
+							<a class="btn btn-primary" href="#">详细信息</a>
+						</div>
+						<div class="col-sm-7 box fl">
+							<a href="#">
+								<img src="img/1502158252.png" class="img-responsive">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="open-api new001">
+			<div class="container1">
+				<div class="row">
+					<div class="col-sm-12 text-center">
+						<h3 class="h3c h3fs h3mb">数据存储加密解决方案</h3>
+						<a class="btn btn-red btns" href="#" target="_blank">更多解决方案</a>
+
+						<div class="row">
+							<div class="col-sm-6 col-md-4">
+								<a href="#" class="item1" style="display:block;">
+									<img src="img/1502102815.png">
+									<h4 class="mb5"><b>HTML5加密解决方案</b></h4>
+									<p class="ps mgb">解决HTML5内容加密，内容可以在Android平台打开播放，但是不能非法复制、转移，保护知识产权。</p>
+								</a>
+							</div>
+
+							<div class="col-sm-6 col-md-4">
+								<a href="#" class="item1" style="display:block;">
+									<img src="img/1502709565.png">
+									<h4 class="mb5"><b>office可编辑保存，防复制解决方案</b></h4>
+									<p class="ps">word、Excel、PPT可在电脑上面打开查看，可以编辑、修改、保存到U盘里面，但是不能非法复制、另存为、打印、截图等。</p>
+								</a>
+							</div>
+							<div class="col-sm-6 col-md-4">
+								<a href="#" class="item1" class="item" style="display:block;">
+									<img src="img/1453947745.png">
+									<h4 class="mb5"><b>电脑优盘锁解决方案</b></h4>
+									<p class="ps">解决Windows系统加密，实现插入电脑优盘锁即可以打开电脑正常使用，拔掉或者没有优盘锁时无法正常使用电脑。</p>
+								</a>
+							</div>
+
+							<div class="col-sm-6 col-md-4">
+								<a href="#" class="item1" style="display:block;">
+									<img src="img/1502706593.png">
+									<h4 class="mb5"><b>防拷贝优盘多分区解决方案</b></h4>
+									<p class="ps">解决防拷贝优盘内容加密，并实现一个优盘四个公开分区，一个隐藏分区。要求公开区内容可设置为只读，隐藏区通过API访问。</p>
+								</a>
+							</div>
+
+							<div class="col-sm-6 col-md-4">
+								<a href="#" class="item1" style="display:block;">
+									<img src="img/1502709292.png">
+									<h4 class="mb5"><b>游戏加密防拷贝解决方案</b></h4>
+									<p class="ps">解决游戏加密防拷贝，支持window、Linux系统，防止数据被拷贝、复制、对拷机对拷，游戏软件被破解和中木马病毒。</p>
+								</a>
+							</div>
+
+							<div class="col-sm-6 col-md-4">
+								<a href="#" class="item1" style="display:block;">
+									<img src="img/1502707861.png">
+									<h4 class="mb5"><b>软件及数据加密防拷贝解决方案</b></h4>
+									<p class="ps">除具加密锁功能和特点外，还兼有U 盘的功能。采用CC EAL5+设计。U盘部分可实现虚拟CDROM、密码存储区、API调用私密区。</p>
+								</a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="about001">
+			<div class="container">
+				<div>
+					<div class="col-sm-8 p2">
+						<p class="mb25 fs25 tc">公司简介</p>
+						<div class="met_editor">
+
+						</div>
+					</div>
+					<!--<div class="col-sm-4 b1 p1">
+						<p class="mb25 fs25 tc">关注我们</p>
+
+						<a href="#" target="_blank" class="btn btn-large btn-bg1 mb25"><i class="fa fa-qq"></i> QQ客服</a>
+
+						<a href="#" target="_blank" class="btn btn-large btn-bg2 mb25"><i class="fa fa-tencent-weibo"></i> 腾讯微博</a>
+
+						<a href="#" target="_blank" class="btn btn-large btn-bg3"><i class="fa fa-weibo"></i> 新浪微博</a>
+
+					</div>
+				</div>-->
+			</div>
+		</div>
+	</body>
+
+</html>
